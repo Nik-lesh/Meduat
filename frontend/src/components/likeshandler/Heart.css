@@ -1,0 +1,27 @@
+.heart-icon {
+  transition: color 0.3s ease; /* Smooth color transition */
+
+  padding: 4px;
+  background-color: transparent;
+  cursor: "pointer";
+}
+
+.heart-icon.beat {
+  animation: beat 0.6s ease-in-out;
+}
+
+@keyframes beat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.2); /* Scale up slightly to mimic beating */
+  }
+  50% {
+    transform: scale(0.9); /* Scale down to create the beat effect */
+  }
+  75% {
+    transform: scale(1.1); /* Slight scale before settling back */
+  }
+}

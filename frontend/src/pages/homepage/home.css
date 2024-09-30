@@ -1,0 +1,125 @@
+.typewriter {
+  font-family: Courier New;
+  display: inline-block;
+  position: relative;
+  font-size: 15px;
+  overflow: hidden;
+  white-space: nowrap;
+  width: auto; /* Ensure the width is controlled */
+}
+
+/* Create the blinking cursor after the text */
+.typewriter:after {
+  content: "";
+  border-right: 0.3px solid var(--cursor-color); /* Cursor color */
+  animation: blink 0.75s step-end infinite; /* Blinking animation */
+  position: absolute;
+  right: 0; /* Cursor starts at the end of the typed line */
+  top: 0;
+}
+
+/* Typing animation */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Blinking cursor animation */
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Typing animations for each line */
+.line-1 {
+  width: 0;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  animation: typing 2s steps(15, end) forwards;
+}
+
+.line-2 {
+  width: 0;
+  animation: typing 2s steps(15, end) forwards 2s;
+}
+
+.line-3 {
+  width: 0;
+  animation: typing 2s steps(15, end) forwards 5s;
+}
+
+.line-4 {
+  width: 0;
+  animation: typing 2s steps(15, end) forwards 7s;
+}
+
+.line-5 {
+  width: 0;
+  animation: typing 2s steps(15, end) forwards 9s;
+}
+
+.line-6 {
+  width: 0;
+  animation: typing 2s steps(15, end) forwards 11s;
+}
+
+.line-7 {
+  width: 0;
+  animation: typing 2s steps(15, end) forwards 13s;
+}
+
+.line-8 {
+  width: 0;
+  animation: typing 2s steps(15, end) forwards 15s;
+}
+
+.line-9 {
+  width: 0;
+  animation: typing 2s steps(15, end) forwards 17s;
+}
+
+.line-10 {
+  width: 0;
+  animation: typing 2s steps(15, end) forwards 19s;
+}
+
+.line-11 {
+  width: 0;
+  animation: typing 2s steps(15, end) forwards 21s;
+}
+
+.line-12 {
+  width: 0;
+  animation: typing 2s steps(15, end) forwards 23s;
+}
+
+/* Define a keyframe animation to delay visibility */
+@keyframes showGroup {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+/* Apply the animation to the group */
+.delayed-display {
+  visibility: hidden; /* Initially hidden */
+  animation: showGroup 0s ease-in 24s forwards; /* Delay visibility for 24s */
+  opacity: 0; /* Start with opacity 0 */
+  transition: opacity 0.5s ease; /* Smooth fade-in */
+}
+
+/* Stop the blinking cursor after typing is finished */
+.done:after {
+  border-right: none;
+}

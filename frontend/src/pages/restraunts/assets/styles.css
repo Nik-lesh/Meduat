@@ -1,0 +1,36 @@
+/* review style on hover style */
+
+.card {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover .overlay-content {
+  opacity: 1; /* Show overlay content on hover */
+}
+
+.card img {
+  transition: filter 0.3s ease-in-out;
+}
+
+.card:hover img {
+  filter: brightness(60%); /* Darken image on hover */
+}
+
+.overlay-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); /* Dark overlay */
+  opacity: 0; /* Hidden by default */
+  transition: opacity 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
